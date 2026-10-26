@@ -2,7 +2,6 @@
 
 *Python script to rename alternative files regardless of patterns by checking skipped numbering in filenames given a .txt or .csv file; used when uploading digital library collections to ResourceSpace.*
 
-------------
 ## Requirements:
   1. a folder containing the numbered image files, and
   2. a list of the MAIN (front) filenames (a .txt with one name per line, or a
@@ -21,7 +20,6 @@ Example, main list = name_b2_f2_001.jpg, name_b2_f2_005.jpg
 A front/back-only collection (xxx.jpg + one extra file) simply produces xxx-alt.jpg.
 
 ## Safety
-------
   * Automatically does a dry run. Nothing is renamed until --apply is added
   * Never overwrites an existing file (skips and warns).
   * Warns if a main would end up with more than 9 alts (10 images total max) so that
@@ -29,6 +27,5 @@ A front/back-only collection (xxx.jpg + one extra file) simply produces xxx-alt.
   * Writes a CSV log of every rename (old name, new name) when --apply is used.
 
 ## Usage
------
   python rename_alt_files.py FOLDER MAIN_LIST.txt            # preview/dry run
   python rename_alt_files.py FOLDER MAIN_LIST.txt --apply    # rename alternative files
